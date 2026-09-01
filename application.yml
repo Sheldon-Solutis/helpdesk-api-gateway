@@ -1,0 +1,21 @@
+spring:
+  cloud:
+    gateway:
+      server:
+        webmvc:
+          routes:
+
+            - id: user-service
+              uri: ${services.user.url}
+              predicates:
+                - Path=/api/users/**
+
+            - id: ticket-service
+              uri: ${services.ticket.url}
+              predicates:
+                - Path=/api/tickets/**
+
+            - id: notification-service
+              uri: ${services.notification.url}
+              predicates:
+                - Path=/api/notifications/**
