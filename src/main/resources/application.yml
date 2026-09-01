@@ -2,7 +2,7 @@ spring:
   cloud:
     gateway:
       server:
-        webmvc:
+        webm:
           routes:
 
             - id: user-service
