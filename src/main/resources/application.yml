@@ -2,9 +2,8 @@ spring:
   cloud:
     gateway:
       server:
-        webm:
+        webmvc:
           routes:
-
             - id: user-service
               uri: ${services.user.url}
               predicates:
